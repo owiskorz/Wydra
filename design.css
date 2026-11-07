@@ -1,0 +1,103 @@
+/* kolory i fonty */
+:root {
+    --kolor-rzeki: #1f3a5f;
+    --kolor-tla: #f7f3ea;
+    --kolor-tekstu: #222222;
+    --kolor-linkow: #1f5f8b;
+    --kolor-akcentu: #c2410c;
+    --kolor-naglowkow-tabeli: #dbe4ee;
+    --kolor-bialy: #ffffff;
+    --kolor-tla-hoover: #c2410c;
+
+    --czcionka-tekstu: Verdana, Arial, Helvetica, sans-serif;
+    --czcionka-naglowkow: Georgia, serif;
+}
+
+body { margin: 16px;
+      font-family:var( --czcionka-tekstu) ;
+      font-size: 1.125rem; 
+      line-height: 1.4; 
+      color:  var(--kolor-tekstu);
+      background: var(--kolor-tla);
+     }
+
+/*kontener*/
+    main {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+ /*nagłówki*/
+     h1 { font-family: var(--czcionka-naglowkow); }
+     h2 { font-size: 1.5rem; }
+
+ /*header/linki w header*/
+header { 
+         background: var(--kolor-rzeki);
+         color: var(--kolor-bialy);
+          padding: 1rem; }
+
+    header a {
+        color: var(--kolor-bialy); 
+        text-decoration: none;}
+
+ /*menu*/       
+  ul {list-style-type: none;
+    margin: 0;
+    text-indent: 0;
+    padding: 0;}
+
+  li {display: inline;
+      margin-right: 1rem; }
+
+ /*nawigacja linki*/     
+nav a{
+    color: var(--kolor-bialy);
+    text-decoration: none;}
+
+/*kreska komunikatow*/
+article { border-left: 4px solid var(--kolor-akcentu);
+     padding-left: 1rem; }
+
+/*czas w komunikatach*/
+time[datetime]::after { content: " [" attr(datetime) "]";
+     color: var(--kolor-rzeki); font-weight: bold; font-size: 0.875rem; }
+
+/*footer*/
+footer {background: var(--kolor-rzeki);
+     color: var(--kolor-bialy);
+      padding: 1rem; }
+
+ /*footer linki*/
+footer a {color: var(--kolor-bialy);
+     text-decoration: none;}
+
+/*linki w body*/
+a {color:var(--kolor-linkow);}
+a:hover {color: var(--kolor-tla-hoover);}
+
+/*tabele*/
+table { border-collapse: collapse;}
+th, td { border: 1px solid var(--kolor-rzeki);
+         padding: 4px 8px;}
+th[scope="col"] { background: var(--kolor-naglowkow-tabeli); }
+th[scope="colgroup"] { background: var(--kolor-naglowkow-tabeli); }
+th[scope="row"] { background: var(--kolor-naglowkow-tabeli); }
+td:empty { background: var(--kolor-naglowkow-tabeli); }
+
+
+/*formularz ramka*/
+fieldset { border: 2px solid var(--kolor-rzeki); }
+
+/*formularz pola formularza*/
+input[type="email"],
+input[type="text"],
+input[type="number"], 
+input[type="date"]{width: 100%; border: 2px solid var(--kolor-rzeki);
+     padding: 0.5rem; box-sizing: border-box;}
+  
+button[type="submit"]
+{background: var(--kolor-akcentu); color: var(--kolor-bialy);}
+     

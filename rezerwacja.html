@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Przeprawa promowa „Wydra”</title>
+	<link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <header>
+    <p>Przeprawa promowa „Wydra”</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="rozklad.html">Rozkład i ceny</a></li>
+        <li><a href="rezerwacja.html">Rezerwacja dla grup</a></li>
+        <li><a href="regulamin.html">Regulamin</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    		<center><h1>Przeprawa promowa „Wydra”</h1></center>
+ <form>
+    <p>
+  <label for="groupName">Nazwa grupy *</label>
+  <input type="text" id="groupName" name="groupName" required>
+</p>
+
+<p>
+  <label for="people">Liczba osób (5–48) *</label>
+  <input type="number" id="people" name="people"
+         min="5" max="48" step="1" required>
+</p>
+
+<p>
+  <label for="date">Dzień przeprawy *</label>
+  <input type="date" id="date" name="date"
+         min="2027-06-06" max="2027-09-09" required>
+</p>
+
+<fieldset>
+  <legend>Brzeg, z którego grupa odpływa *</legend>
+  <p>
+    <input type="radio" id="from-brzeg" name="from"
+           value="brzeg-gorny" required>
+    <label for="from-brzeg">Brzeg Górny</label>
+  </p>
+  <p>
+    <input type="radio" id="from-kepa" name="from"
+           value="kepa-lakowa">
+    <label for="from-kepa">Kępa Łąkowa</label>
+  </p>
+</fieldset>
+
+<p>
+  <label for="bikes">Liczba rowerów (0–10)</label>
+  <input type="number" id="bikes" name="bikes"
+         min="0" max="10" step="1">
+</p>
+
+<p>
+  <label for="email">E-mail do kontaktu *</label>
+  <input type="email" id="email" name="email" required>
+</p>
+
+<p>
+  <label for="pass">Numer karnetu grupowego (np. WY-0427)</label>
+  <input type="text" id="pass" name="pass"
+         pattern="WY-[0-9]{4}"
+         >
+</p>
+    
+    <p><button type="submit">Wyślij rezerwację</button></p>
+  </form>
+</main>
+<footer>
+    <address>
+      Józef Wydra, Brzeg Górny 7<br>
+      <a href="mailto:przeprawa.wydra@example.com">przeprawa.wydra@example.com</a>
+    </address>
+  </footer>
+    </main>
+</body>
